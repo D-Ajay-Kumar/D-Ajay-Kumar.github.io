@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by D Ajay Kumar — AI/LLM engineering." />
+  <title>Projects · D Ajay Kumar</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <div class="site-grid" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">DA<span class="nav__logo-dot">/</span></a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="index.html#posts" class="nav__link">Writing</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+      <a href="projects.html" class="nav__link nav__link--active">Projects</a>
+      <a href="skills.html" class="nav__link">Skills</a>
+    </div>
+    <div class="nav__actions">
+      <a href="https://github.com/D-Ajay-Kumar" target="_blank" rel="noopener noreferrer" class="nav__cta">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/d-ajay-kumar/" target="_blank" rel="noopener noreferrer" class="nav__cta">LinkedIn ↗</a>
+    </div>
+  </nav>
+
+  <main class="projects-layout">
+    <div class="section-head">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">AI applications, developer tools, and systems I build to learn and solve practical problems.</p>
+    </div>
+    <div id="projects-grid" class="projects-grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>D Ajay Kumar</span>
+      <span>·</span>
+      <span>Built with static HTML &amp; a little magic</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { PROJECTS } from "./js/main.js";
+    const grid = document.getElementById("projects-grid");
+    grid.innerHTML = PROJECTS.map((p) => `
+      <div class="project-card">
+        <div class="project-card__icon">${p.icon}</div>
+        <h3 class="project-card__title">${p.title}</h3>
+        <p class="project-card__desc">${p.desc}</p>
+        <div class="project-card__tags">${p.tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
+        <div class="project-card__links">${p.links.map((l) => `<a href="${l.href}" target="_blank" rel="noopener noreferrer">${l.label}</a>`).join("")}</div>
+      </div>`).join("");
+  </script>
+</body>
+</html>

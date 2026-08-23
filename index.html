@@ -1,38 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="sde_blog">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>sde_blog</title>
-  <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090b" />
+  <meta name="description" content="D Ajay Kumar — AI/LLM engineer writing about agents, MCPs, LLMs, and inference engineering." />
+  <title>D Ajay Kumar · AI Engineer</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <div class="site-grid" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">DA<span class="nav__logo-dot">/</span></a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link nav__link--active">Home</a>
+      <a href="#posts" class="nav__link">Writing</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html" class="nav__link">Skills</a>
+    </div>
+    <div class="nav__actions">
+      <a href="https://github.com/D-Ajay-Kumar" target="_blank" rel="noopener noreferrer" class="nav__cta">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/d-ajay-kumar/" target="_blank" rel="noopener noreferrer" class="nav__cta">LinkedIn ↗</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <p class="hero__eyebrow"><span class="status-dot"></span> learning &amp; building with AI/LLMs</p>
+    <h1 class="hero__title">D Ajay Kumar — AI/LLM engineer.<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="hero__subtitle">I build AI applications and agentic systems, and explore inference engineering when I want to understand the stack in more depth. This site is where I share what I build and learn along the way.</p>
+    <div class="hero__actions">
+      <a href="#posts" class="btn btn--primary">./read-writing</a>
+      <a href="projects.html" class="btn btn--ghost">./view-projects</a>
+    </div>
+  </header>
+
+  <!-- Latest posts -->
+  <main id="posts" class="container">
+    <div class="section-head">
+      <div><p class="section-kicker">01 / FIELD NOTES</p><h2 class="section-title">Notes from building.</h2></div>
+      <p class="section-sub">Practical lessons, technical deep dives, and experiments from my work in AI and software engineering.</p>
+    </div>
+    <div class="authorship-note" aria-label="All blog posts are written by D Ajay Kumar">
+      <span class="authorship-note__rejected">AI</span>
+      <strong>D Ajay's slop</strong>
+      <span class="authorship-note__detail">Every post written by me.</span>
+    </div>
+    <div id="posts-grid" class="posts-grid">
+      <!-- Posts injected by JS -->
+      <div class="loading">Loading field notes...</div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>D Ajay Kumar</span>
+      <span class="footer__mark">DA/</span>
+      <span>Vibe-coded shell. Human-written posts.</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

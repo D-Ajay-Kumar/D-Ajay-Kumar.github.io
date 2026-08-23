@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Skillset of D Ajay Kumar — AI/LLM engineering." />
+  <title>Skills · D Ajay Kumar</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <div class="site-grid" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">DA<span class="nav__logo-dot">/</span></a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="index.html#posts" class="nav__link">Writing</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html" class="nav__link nav__link--active">Skills</a>
+    </div>
+    <div class="nav__actions">
+      <a href="https://github.com/D-Ajay-Kumar" target="_blank" rel="noopener noreferrer" class="nav__cta">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/d-ajay-kumar/" target="_blank" rel="noopener noreferrer" class="nav__cta">LinkedIn ↗</a>
+    </div>
+  </nav>
+
+  <main class="skills-layout">
+    <div class="section-head">
+      <h2 class="section-title">Skillset</h2>
+      <p class="section-sub">The tools I use to build AI applications and production software.</p>
+    </div>
+    <div id="skills-grid" class="skills-grid"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>D Ajay Kumar</span>
+      <span>·</span>
+      <span>Built with static HTML &amp; a little magic</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { SKILLS } from "./js/main.js";
+    const grid = document.getElementById("skills-grid");
+    grid.innerHTML = SKILLS.map((s) => `
+      <div class="skill-card">
+        <h3><span class="index">${s.icon}</span> ${s.title}</h3>
+        <ul class="skill-list">${s.items.map((i) => `<li>${i}</li>`).join("")}</ul>
+      </div>`).join("");
+  </script>
+</body>
+</html>

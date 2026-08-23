@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume of D Ajay Kumar — AI Engineer." />
+  <title>Resume · D Ajay Kumar</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <div class="site-grid" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">DA<span class="nav__logo-dot">/</span></a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="index.html#posts" class="nav__link">Writing</a>
+      <a href="resume.html" class="nav__link nav__link--active">Resume</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html" class="nav__link">Skills</a>
+    </div>
+    <div class="nav__actions">
+      <a href="https://github.com/D-Ajay-Kumar" target="_blank" rel="noopener noreferrer" class="nav__cta">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/d-ajay-kumar/" target="_blank" rel="noopener noreferrer" class="nav__cta">LinkedIn ↗</a>
+    </div>
+  </nav>
+
+  <main class="resume-layout">
+    <div class="resume-header">
+      <h1>D Ajay Kumar</h1>
+      <p class="subtitle">Software Engineer · Agentic AI · Distributed Systems</p>
+      <p class="resume-header__summary">Software engineer building agentic AI platforms, developer tools, and distributed systems used at production scale.</p>
+      <div class="resume-header__actions">
+        <a href="https://drive.google.com/file/d/1KlHScBcPfsc2ojGqgqAH_P4Qr7k-P89E/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn--primary">View resume ↗</a>
+        <a href="D_Ajay_SDE_AI_Eng.pdf" download class="btn btn--ghost">Download PDF</a>
+      </div>
+    </div>
+
+    <section class="resume-section">
+      <h2>Experience</h2>
+      <div id="resume-experience"></div>
+    </section>
+
+    <section class="resume-section">
+      <h2>Education</h2>
+      <div id="resume-education"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>D Ajay Kumar</span>
+      <span>·</span>
+      <span>Built with static HTML &amp; a little magic</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { RESUME } from "./js/main.js";
+    const exp = document.getElementById("resume-experience");
+    exp.innerHTML = RESUME.experience.map((e) => `
+      <div class="resume-item">
+        <div class="resume-item__title">${e.title}</div>
+        <div class="resume-item__org">${e.org}</div>
+        ${e.date ? `<div class="resume-item__date">${e.date}</div>` : ""}
+        <div class="resume-item__desc">${e.desc}</div>
+      </div>`).join("");
+    const edu = document.getElementById("resume-education");
+    edu.innerHTML = RESUME.education.map((e) => `
+      <div class="resume-item">
+        <div class="resume-item__title">${e.title}</div>
+        <div class="resume-item__org">${e.org}</div>
+        ${e.date ? `<div class="resume-item__date">${e.date}</div>` : ""}
+      </div>`).join("");
+  </script>
+</body>
+</html>

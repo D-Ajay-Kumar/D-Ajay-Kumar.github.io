@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://d-ajay-kumar.github.io/sitemap.xml

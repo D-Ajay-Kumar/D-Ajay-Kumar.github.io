@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Field notes by D Ajay Kumar on AI, systems, and software engineering." />
+  <title>Field note · D Ajay Kumar</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="site-grid" aria-hidden="true"></div>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">DA<span class="nav__logo-dot">/</span></a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="index.html#posts" class="nav__link nav__link--active">Writing</a>
+      <a href="resume.html" class="nav__link">Resume</a>
+      <a href="projects.html" class="nav__link">Projects</a>
+      <a href="skills.html" class="nav__link">Skills</a>
+    </div>
+    <div class="nav__actions">
+      <a href="https://github.com/D-Ajay-Kumar" target="_blank" rel="noopener noreferrer" class="nav__cta">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/d-ajay-kumar/" target="_blank" rel="noopener noreferrer" class="nav__cta">LinkedIn ↗</a>
+    </div>
+  </nav>
+  <main class="reader">
+    <a href="index.html#posts" class="reader__back">← Back to field notes</a>
+    <div id="reader-meta" class="reader__meta"></div>
+    <h1 id="reader-title" class="reader__title">Loading field note...</h1>
+    <img id="reader-cover" class="reader__cover" alt="" style="display:none" />
+    <article id="reader-content" class="reader__content"></article>
+    <div id="reader-nav"></div>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
